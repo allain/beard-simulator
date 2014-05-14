@@ -99,6 +99,7 @@ body { font-family: Arial; }
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
 }
 .bs-webcam-screen video {
     width:100%;

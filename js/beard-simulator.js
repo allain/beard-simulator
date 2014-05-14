@@ -45,7 +45,7 @@
                 if(images.base) {
                     canvas.setHeight(images.base.height * images.base.scaleY);
                     canvas.add(images.base);
-                } else { canvas.setHeight(settings.width * 0.7272); }
+                } else { canvas.setHeight(settings.width * 0.75); }
                 
                 if (images.accessory) { canvas.add(images.accessory); }
                 

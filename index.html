@@ -6,8 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Beard Simulator : Upload a picture or use your webcam, and put a beard on your face :)" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
+	<link rel="stylesheet" href="css/beard-simulator.css"/>
+	<link rel="stylesheet" href="css/buttons.css"/>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/base64binary.min.js"></script>
+	<script type="text/javascript" src="js/facebook-canvas-post.min.js"></script>
+	<script type="text/javascript" src="http://leemachin.github.io/say-cheese/public/js/say-cheese.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+	<script type="text/javascript" src="js/beard-simulator.js"></script>
+	<script>
+		$(function () {
+			$('#beard-simulator').beardSimulator({
+				accessories: [
+				{url:'images/john.png',text:'Beard'}
+				],
+				width: 660,
+				onUnsupported: function() {
+					$('#beard-simulator').text('Your browser is not supported. Supported browsers include: Chrome, Firefox, Safari 6, Internet Explorer 10');
+				}
+			});
+		});
+	</script>
+	
     <title>Beard Simulator</title>
   </head>
 
@@ -32,6 +53,23 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <p>Beard Simulator</p>
+		
+		<div id="beard-simulator"></div>
+
+		<!-- REQUIRED: Facebook API init -->
+		<div id="fb-root"></div>
+		<script> /* Include the FB API for the social button */
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '639015346176074',
+		      status     : true,
+		      xfbml      : true
+		    });
+		  };
+		
+		  (function(d, s, id){ var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+		</script>
+		
       </section>
     </div>
 

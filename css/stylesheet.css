@@ -421,3 +421,45 @@ Small Device Styles
   }
 
 }
+.ifWebcam {
+	display: none;
+}
+#instructions {
+	width: 660px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.instruction {
+	display: inline-block;
+    *display: inline;
+    zoom: 1;
+	vertical-align: baseline;
+	width: 30%;
+	border: 1px solid #333;
+	border-radius: 4px;
+	padding: 5px;
+	position: relative;
+}
+.instruction strong {
+	font-size: 130%;
+	color: #E2881E;
+}
+.instruction .bottomLeft, .instruction .bottomCenter, .instruction .bottomRight {
+	display: block;
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	bottom: -19px;
+}
+.instruction .bottomLeft {
+	left: 10px;
+	background: url(../images/bottomleft.png) 0 0 no-repeat;
+}
+.instruction .bottomCenter {
+	left: 10px;
+	background: url(../images/bottom.png) 0 0 no-repeat;
+}
+.instruction .bottomRight {
+	right: 10px;
+	background: url(../images/bottomright.png) 0 0 no-repeat;
+}

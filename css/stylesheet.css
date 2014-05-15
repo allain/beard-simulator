@@ -460,3 +460,4 @@ Small Device Styles
 	right: 10px;
 	background: url(../images/bottomright.png) 0 0 no-repeat;
 }
+small { font-size: 59%; }

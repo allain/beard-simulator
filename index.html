@@ -17,13 +17,6 @@
 	<script type="text/javascript" src="https://raw.githubusercontent.com/ampersandre/beard-simulator/master/js/beard-simulator.js"></script>
 	<script>
 		$(function () {
-			navigator.getMedia = ( navigator.getUserMedia || // use the proper vendor prefix
-                       navigator.webkitGetUserMedia ||
-                       navigator.mozGetUserMedia ||
-                       navigator.msGetUserMedia);
-			navigator.getMedia({video: true}, function() {
-				$('.ifWebcam').show();
-			}, function() { });
 			$('#beard-simulator').beardSimulator({
 				accessories: [
 					{url:'images/john.png',text:'John Nilson'},
@@ -62,17 +55,17 @@
 		<div id="instructions">
 			<div class="instruction" style="width: 27%;">
 				<strong>1.</strong>
-				Pick a photo from your computer<span class="ifWebcam">, or use your webcam</span>
+				Pick a photo from your computer, or use your webcam
 				<span class="bottomLeft"></span>
 			</div>
-			<div class="instruction" style="width: 18%; margin: 0 47px 0 67px;">
+			<div class="instruction" style="width: 18%; margin: 0 16px 0 102px;">
 				<strong>2.</strong>
 				Pick a beard
 				<span class="bottomCenter"></span>
 			</div>
 			<div class="instruction" style="">
 				<strong>3.</strong>
-				Share it on Facebook, or save it to your computer
+				Save it to your computer, or share it on Facebook
 				<span class="bottomRight"></span>
 			</div>
 		</div>

@@ -421,9 +421,6 @@ Small Device Styles
   }
 
 }
-.ifWebcam {
-	display: none;
-}
 #instructions {
 	width: 660px;
 	text-align: center;

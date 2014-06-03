@@ -423,7 +423,8 @@ Small Device Styles
 }
 #instructions {
 	width: 660px;
-	text-align: center;
+	height: 101px;
+	position: relative;
 	margin-bottom: 20px;
 }
 .instruction {
@@ -431,11 +432,12 @@ Small Device Styles
     *display: inline;
     zoom: 1;
 	vertical-align: baseline;
-	width: 30%;
+	
 	border: 1px solid #333;
 	border-radius: 4px;
 	padding: 5px;
-	position: relative;
+	position: absolute;
+	bottom: 0;
 }
 .instruction strong {
 	font-size: 130%;
